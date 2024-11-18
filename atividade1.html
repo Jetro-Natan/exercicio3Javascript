@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <script>
+        // Obter as notas
+        const nota1 = parseFloat(prompt("Digite a primeira nota:"));
+        const nota2 = parseFloat(prompt("Digite a segunda nota:"));
+
+        // Calcular a média
+        const media = (nota1 + nota2) / 2;
+
+        // Determinar situação
+        let situacao, cor;
+        if (media >= 6) {
+            situacao = "APROVADO";
+            cor = "blue";
+        } else {
+            situacao = "REPROVADO";
+            cor = "red";
+        }
+
+        // Exibir resultado
+        document.write(`<p>Média: <span style="color:${cor}">${media.toFixed(2)}</span></p>`);
+        document.write(`<p>Situação: <span style="color:${cor}">${situacao}</span></p>`);
+    </script>
+</body>
+</html>
